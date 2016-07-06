@@ -39,8 +39,8 @@ use yii\bootstrap\Nav;
                     <?=Nav::widget([
 	                    	'options' => ['class' => 'navbar-nav navbar-right'],
 	                    	'items' => [
-                                ['label' => 'Home', 'url' => '/web/site/index'],
-                                ['label' => 'Singers', 'url' => '/web/singers/index'],
+                                ['label' => 'Home', 'url' => '/site/index'],
+                                ['label' => 'Singers', 'url' => '/singers/index'],
                                 ['label' => 'Charts', 'url' => '/site/charts'],
 	                    		[
 	                    			'label' => 'Login',
@@ -54,7 +54,7 @@ use yii\bootstrap\Nav;
 			                    				['label' => 'Edit Profile', 'url' => '#' ],
 			                    				[
                                                     'label' => 'Logout',
-                                                    'url' => '/web/form/logout',
+                                                    'url' => '/form/logout',
                                                     'linkOptions' => ['data-method' => 'post'],
                                                 ],
 
