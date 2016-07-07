@@ -66,10 +66,11 @@ class SingersController extends Controller
     public function actionCreate()
     {
         $model = new Singers();
-
+        
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
+            $model->user_id = 2;
             return $this->render('create', [
                 'model' => $model,
             ]);
@@ -122,5 +123,16 @@ class SingersController extends Controller
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
+    }
+
+    public function actionTest(){
+        $model = New Singers();
+
+        $model->user_id = \Yii::$app->user->identity->id;
+        $model->name = Yii::$app->user->identity->username;
+        echo $model->user_id;
+        echo $model->name;
+
+        $model->save();
     }
 }
