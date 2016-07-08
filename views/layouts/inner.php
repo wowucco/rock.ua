@@ -9,7 +9,7 @@ MainAsset::register($this);
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Realestate Bootstrap Theme </title>
+    <title>Rock'n'Roll</title>
     <meta charset="<?= Yii::$app->charset ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <?= \yii\helpers\Html::csrfMetaTags() ?>

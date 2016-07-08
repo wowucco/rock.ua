@@ -24,6 +24,15 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
         ]) ?>
     </p>
+    <?php if($model->isNewRecord) : ?>
+        <?= \yii\bootstrap\Alert::widget([
+                'options' => [
+                'class' => 'alert-info'
+                ],
+                'body' => 'You create new singer '.$model->name,
+            ]);
+        ?>
+    <?php endif; ?>
 
     <?= DetailView::widget([
         'model' => $model,
