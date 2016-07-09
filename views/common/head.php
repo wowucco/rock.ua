@@ -39,27 +39,26 @@ use yii\bootstrap\Nav;
                     <?=Nav::widget([
 	                    	'options' => ['class' => 'navbar-nav navbar-right'],
 	                    	'items' => [
-                                ['label' => 'Home', 'url' => '/web/site/index'],
-                                ['label' => 'Singers', 'url' => '/web/singers/index'],
-                                ['label' => 'Charts', 'url' => '/web/site/charts'],
-	                    		[
+                                ['label' => 'Home', 'url' => '/site/index'],
+                                ['label' => 'Singers', 'url' => '/singers/index'],
+                                ['label' => 'Charts', 'url' => '/site/charts'],
+                                Yii::$app->user->isGuest ? (
+                                [
 	                    			'label' => 'Login',
 	                    			'url' => ['/form/login'],
-	                    			'visible' => Yii::$app->user->isGuest
-	                    		],
+	                    		]) : (
 								[
-                                    'visible' => !Yii::$app->user->isGuest,
 			                    	'label' => Yii::$app->user->identity->username,
 			                    		'items' => [
 			                    				['label' => 'Edit Profile', 'url' => '#' ],
 			                    				[
                                                     'label' => 'Logout',
-                                                    'url' => '/web/form/logout',
+                                                    'url' => '/form/logout',
                                                     'linkOptions' => ['data-method' => 'post'],
                                                 ],
 
                                         ],
-	                    		],
+	                    		])
 	                    	],
                     	]);
                     ?>

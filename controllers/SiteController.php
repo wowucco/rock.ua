@@ -27,6 +27,11 @@ class SiteController extends Controller
         ];
     }
 
+    public function actionLogin()
+    {
+        return $this->redirect(['form/login']);
+    }
+
     public function actionIndex()
     {
     	$this->layout = 'bootstrap';

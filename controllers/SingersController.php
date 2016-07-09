@@ -8,6 +8,7 @@ use app\models\SingersSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
 
 /**
  * SingersController implements the CRUD actions for Singers model.
@@ -28,6 +29,18 @@ class SingersController extends Controller
                     'delete' => ['POST'],
                 ],
             ],
+            'access' => [
+                'class' => AccessControl::className(),
+                'only' => ['create', 'update', 'delete'],
+                'rules' => [
+                    [
+                        'actions' => ['create', 'update', 'delete'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+                ],
+            ],
+
         ];
     }
 
@@ -45,6 +58,17 @@ class SingersController extends Controller
             'dataProvider' => $dataProvider,
         ]);
     }
+
+    /**
+     * Lists all in Singers model (no gii)
+     */
+    public function actionAll()
+    {
+        $model = new Singers();
+        print_r($model->getAttributes());die;
+        return $this->render('all', []);
+    }
+
 
     /**
      * Displays a single Singers model.
