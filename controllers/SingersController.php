@@ -68,9 +68,8 @@ class SingersController extends Controller
         $model = new Singers();
         
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['view', 'id' => $model->id, 'status' => true]);
         } else {
-            $model->user_id = 2;
             return $this->render('create', [
                 'model' => $model,
             ]);

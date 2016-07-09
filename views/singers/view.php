@@ -24,7 +24,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
         ]) ?>
     </p>
-    <?php if($model->isNewRecord) : ?>
+    <?php if($_GET['status']) : ?>
         <?= \yii\bootstrap\Alert::widget([
                 'options' => [
                 'class' => 'alert-info'

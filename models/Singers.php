@@ -33,7 +33,7 @@ class Singers extends \yii\db\ActiveRecord
             [['description'], 'string'],
             [['name'], 'string', 'max' => 100],
             [['image'], 'string', 'max' => 255],
-            //[['user_id'], 'integer'],
+            [['user_id'], 'integer'],
         ];
     }
 
