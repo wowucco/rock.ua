@@ -50,25 +50,12 @@ class SingersController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new SingersSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $AllSingers = Singers::find()->all();
 
-        return $this->render('index', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
-        ]);
+        if($AllSingers){
+            return $this->render('index', ['allsingers' => $AllSingers]);
+        }
     }
-
-    /**
-     * Lists all in Singers model (no gii)
-     */
-    public function actionAll()
-    {
-        $model = new Singers();
-        print_r($model->getAttributes());die;
-        return $this->render('all', []);
-    }
-
 
     /**
      * Displays a single Singers model.

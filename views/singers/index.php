@@ -18,19 +18,18 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <?= Html::a('Create new Singer', ['create'], ['class' => 'btn btn-primary']) ?>
     </p>
-    <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        //'filterModel' => $searchModel,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
-            'id',
-            'name',
-            'description:ntext',
-            'image',
-            'user_id',
-
-            ['class' => 'yii\grid\ActionColumn'],
-        ],
-    ]); ?>
+    <div class="row">
+        <?php foreach ($allsingers as $singer) { ?>
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="<?=$singer->image ?>" alt="">
+                <div class="caption">
+                    <h3><?=$singer->name?></h3>
+                    <p><?=$singer->text_preview.'...'?></p>
+                    <p><a href="/singers/view?id=<?=$singer->id?>" class="btn btn-primary" role="button">Details</a></p>
+                </div>
+            </div>
+        </div>
+        <?php } ?>
+    </div>
 </div>
