@@ -48,15 +48,12 @@ use yii\widgets\Breadcrumbs;
         ?>
     <?php endif; ?>
 
-    <?= DetailView::widget([
-        'model' => $model,
-        'attributes' => [
-            'id',
-            'name',
-            'description:ntext',
-            'image',
-            'user_id',
-        ],
-    ]) ?>
+   
+                <img src="<?=$model->image?>" alt="...">
+
+                    <h3><?=$model->name?></h3>
+                    <p><?=$model->description?></p>
+
+
 
 </div>

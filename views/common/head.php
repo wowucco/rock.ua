@@ -18,16 +18,14 @@ use yii\bootstrap\Nav;
         <div class="container">
             <div class="navbar-header">
 
-
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                </button>
+                </button>-->
 
             </div>
-
 
             <!-- Nav Starts -->
            
@@ -83,11 +81,6 @@ use yii\bootstrap\Nav;
     <div class="header">
         <a href="/site/index" ><img src="/realestate/images/logo.jpg"  alt="Rock'n'Roll"></a>
 
-        <ul class="pull-right">
-            <li><a href="buysalerent.html" >Listen</a></li>
-            <li><a href="buysalerent.html" >Add</a></li>
-            <li><a href="buysalerent.html" >Search</a></li>
-        </ul>
     </div>
     <!-- #Header Starts -->
 </div>
