@@ -11,29 +11,30 @@
 
 use yii\bootstrap\Nav;
 ?>
+
+<div class="container">
+
+    <!-- Header Starts -->
+
+    <div class="header">
+        <a href="/site/index" ><img src="/realestate/images/logo.png"  alt="Rock'n'Roll"></a>
+    </div>
+
+    <!-- #Header Starts -->
+
+</div>
+
 <!-- Header Starts -->
 <div class="navbar-wrapper">
 
     <div class="navbar-inverse" role="navigation">
         <div class="container">
-            <div class="navbar-header">
-
-                <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>-->
-
-            </div>
 
             <!-- Nav Starts -->
            
             <div class="navbar-collapse  collapse">
                 <ul class="nav navbar-nav navbar-right">
 
-
-                    
                     <?=Nav::widget([
 	                    	'options' => ['class' => 'navbar-nav navbar-right'],
 	                    	'items' => [
@@ -54,7 +55,6 @@ use yii\bootstrap\Nav;
                                                     'url' => '/web/form/logout',
                                                     'linkOptions' => ['data-method' => 'post'],
                                                 ],
-
                                         ],
 	                    		])
 	                    	],
@@ -63,6 +63,7 @@ use yii\bootstrap\Nav;
 
                 </ul>
             </div>
+
             <!-- #Nav Ends -->
 
         </div>
@@ -75,12 +76,4 @@ use yii\bootstrap\Nav;
 
 
 
-<div class="container">
 
-    <!-- Header Starts -->
-    <div class="header">
-        <a href="/site/index" ><img src="/realestate/images/logo.jpg"  alt="Rock'n'Roll"></a>
-
-    </div>
-    <!-- #Header Starts -->
-</div>
