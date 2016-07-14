@@ -12,18 +12,6 @@
 use yii\bootstrap\Nav;
 ?>
 
-<div class="container">
-
-    <!-- Header Starts -->
-
-    <div class="header">
-        <a href="/site/index" ><img src="/realestate/images/logo.png"  alt="Rock'n'Roll"></a>
-    </div>
-
-    <!-- #Header Starts -->
-
-</div>
-
 <!-- Header Starts -->
 <div class="navbar-wrapper">
 
@@ -67,6 +55,18 @@ use yii\bootstrap\Nav;
             <!-- #Nav Ends -->
 
         </div>
+    </div>
+
+    <div class="container">
+
+        <!-- Header Starts -->
+
+        <div class="header">
+            <a href="/site/index" ><img src="/realestate/images/logo.PNG"  alt="Rock'n'Roll"></a>
+        </div>
+
+        <!-- #Header Starts -->
+
     </div>
 
 </div>
