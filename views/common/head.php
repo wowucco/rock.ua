@@ -7,28 +7,28 @@
  */
 ?>
 
-<?php
-
-use yii\bootstrap\Nav;
-?>
-
 <!-- Header Starts -->
-<div class="navbar-wrapper">
+<hr>
+<div class="container">
+    <div class="header">
+        <a href="/site/index" ><img src="/realestate/images/logo.PNG"  alt="Rock'n'Roll"></a>
+    </div>
+</div>
+<hr>
+<!-- Nav Starts -->
 
+<div class="navbar-wrapper">
     <div class="navbar-inverse" role="navigation">
         <div class="container">
-
-            <!-- Nav Starts -->
-           
             <div class="navbar-collapse  collapse">
                 <ul class="nav navbar-nav navbar-right">
 
-                    <?=Nav::widget([
+                    <?= \yii\bootstrap\Nav::widget([
 	                    	'options' => ['class' => 'navbar-nav navbar-right'],
 	                    	'items' => [
-                                ['label' => 'Home', 'url' => '/web/site/index'],
-                                ['label' => 'Singers', 'url' => '/web/singers/index'],
-                                ['label' => 'Charts', 'url' => '/web/charts/index'],
+                                ['label' => 'Home', 'url' => '/site/index'],
+                                ['label' => 'Singers', 'url' => '/singers/index'],
+                                ['label' => 'Charts', 'url' => '/charts/index'],
                                 Yii::$app->user->isGuest ? (
                                 [
 	                    			'label' => 'Login',
@@ -40,7 +40,7 @@ use yii\bootstrap\Nav;
 			                    				['label' => 'Edit Profile', 'url' => '#' ],
 			                    				[
                                                     'label' => 'Logout',
-                                                    'url' => '/web/form/logout',
+                                                    'url' => '/form/logout',
                                                     'linkOptions' => ['data-method' => 'post'],
                                                 ],
                                         ],
@@ -51,25 +51,12 @@ use yii\bootstrap\Nav;
 
                 </ul>
             </div>
-
-            <!-- #Nav Ends -->
-
         </div>
     </div>
-
-    <div class="container">
-
-        <!-- Header Starts -->
-
-        <div class="header">
-            <a href="/site/index" ><img src="/realestate/images/logo.PNG"  alt="Rock'n'Roll"></a>
-        </div>
-
-        <!-- #Header Starts -->
-
-    </div>
-
 </div>
+<hr>
+<!-- #Nav Ends -->
+
 <!-- #Header Starts -->
 
 

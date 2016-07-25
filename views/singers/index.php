@@ -25,7 +25,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <div class="caption">
                     <h3><?=$singer->name?></h3>
                     <p><?=$singer->text_preview.'...'?></p>
-                    <p><a href="/web/singers/view?id=<?=$singer->id?>" class="btn btn-primary" role="button">Details</a></p>
+                    <p><a href="/singers/view?id=<?=$singer->id?>" class="btn btn-primary" role="button">Details</a></p>
                 </div>
             </div>
         </div>

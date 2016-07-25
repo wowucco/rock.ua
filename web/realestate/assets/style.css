@@ -19,7 +19,7 @@ h6{margin: 0 0 10px 0; font-size: 14px;}
 h4 span{margin-right: 5px; font-size: 15px;}
 h6 span{margin-right: 5px; font-size: 12px;}
 
-hr{border: none; background-color: #1a1a1a; height: 2px; margin: 4px;}
+hr{border: none; background-color: #1a1a1a; height: 2px; margin: 3px;}
 
 p{margin-bottom: 30px;}
 a{color:#72b70f; text-decoration:none;outline: none;}
@@ -47,7 +47,7 @@ table{background-color: #fff;}
 .header ul li{ display: inline-block; padding: 0 0 0 40px;}
 .header ul li a{ font-size: 19px;font-family: din;text-transform: uppercase;}
 .header ul li a:hover{text-decoration: none;}
-.header a img {height: 100px; margin-top: -10px; margin-bottom: -10px}
+.header a img {height: 70px; margin-top: -10px; margin-bottom: -10px}
 
 .navbar-inverse{background-color: #111;}
 .navbar-inverse .navbar-nav > li > a{font-size: 11px;padding-top: 10px;padding-bottom: 10px;font-family: din;text-transform: uppercase;}
@@ -145,6 +145,8 @@ h2{font-size: 25px;}
 }
 
 .slider{
-    width: 80%;
-    margin: auto;
+    border: 1px solid;
+    width: 800px;
+    margin: 0 20%;
+
 }

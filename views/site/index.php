@@ -2,11 +2,10 @@
 use yii\bootstrap\Carousel;
 ?>
 
-<hr>
+
                     <?= Carousel::widget([
                         'options' => [
                             'class' => 'slider',
-                            'data-target' => '#carousel-example-generic',
                         ],
                         'items' => [
                             // the item contains only the image
@@ -15,14 +14,21 @@ use yii\bootstrap\Carousel;
                                 'caption' => '<h4>This is title</h4><p>This is the caption text</p>',
 
                             ],
-                                // equivalent to the above
-                            /*['content' => '<img src="/realestate/images/slider/2.jpg"/>'],
-                            // the item contains both the image and the caption
+                            [
+                                'content' => '<img src="/realestate/images/slider/2.jpg"/>',
+                                'caption' => '<h4>This is title</h4><p>This is the caption text</p>',
+
+                            ],
                             [
                                 'content' => '<img src="/realestate/images/slider/3.jpg"/>',
                                 'caption' => '<h4>This is title</h4><p>This is the caption text</p>',
 
-                            ],*/
+                            ],
+                            [
+                                'content' => '<img src="/realestate/images/slider/4.jpg"/>',
+                                'caption' => '<h4>This is title</h4><p>This is the caption text</p>',
+
+                            ],
                         ]
                     ]);
                     ?>
@@ -70,7 +76,7 @@ use yii\bootstrap\Carousel;
 
                 </div>
                 <div class="col-lg-5 col-lg-offset-1 col-sm-6 ">
-                    <h2>Citation</h2>
+                    <h2><?=\app\components\citations\CitationsWidget::widget()?></h2>
                 </div>
             </div>
         </div>

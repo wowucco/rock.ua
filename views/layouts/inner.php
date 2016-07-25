@@ -41,7 +41,6 @@ MainAsset::register($this);
   <?= $this->render("//common/head") ?>
 <!-- #Header Starts -->
 
-
 <div class="inside-banner">
     <div class="container">
         <h2><?=$this->title;?></h2>

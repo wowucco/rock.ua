@@ -17,7 +17,6 @@ use yii\widgets\Breadcrumbs;
                     [
                         'label' => 'Singers',
                         'url' => ['singers/index'],
-
                     ],
                     $this->title,
                 ],
@@ -48,12 +47,9 @@ use yii\widgets\Breadcrumbs;
         ?>
     <?php endif; ?>
 
-   
-                <img src="<?=$model->image?>" alt="...">
+    <img src="<?=$model->image?>" alt="<?=$model->name?>">
 
-                    <h3><?=$model->name?></h3>
-                    <p><?=$model->description?></p>
-
-
+    <h3><?=$model->name?></h3>
+    <p><?=$model->description?></p>
 
 </div>
