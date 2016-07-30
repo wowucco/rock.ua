@@ -1,20 +1,19 @@
 <?php
-
-use yii\helpers\Html;
-use yii\grid\GridView;
-
-/* @var $this yii\web\View */
-/* @var $dataProvider yii\data\ActiveDataProvider */
-
-$this->title = 'Charts';
-$this->params['breadcrumbs'][] = $this->title;
+use yii\widgets\Breadcrumbs;
 ?>
+
+<?php $this->title = 'Charts' ?>
+<span class="pull-right">
+        <?= Breadcrumbs::widget([
+
+            'links' => [
+                $this->title,
+            ],
+        ]);
+        ?>
+    </span>
 <div class="charts-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h2>Sorry, this section is not yet complete</h2>
 
-    <p>
-        <?= Html::a('Create Charts', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
-    
 </div>

@@ -1,18 +1,27 @@
 <?php
 
-use yii\helpers\Html;
+use yii\widgets\Breadcrumbs;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Singers */
-
-$this->title = 'Update Singers: ' . $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Singers', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = 'Update';
 ?>
-<div class="singers-update">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+<?php $this->title = $model->isNewRecord ? 'Create' : 'Update '.$model->name ; ?>
+<span class="pull-right">
+        <?= Breadcrumbs::widget([
+
+            'links' => [
+                [
+                    'label' => 'Singers',
+                    'url' => ['singers/index'],
+                ],
+                $this->title,
+            ],
+        ]);
+        ?>
+    </span>
+
+<div class="singers-update">
 
     <?= $this->render('_form', [
         'model' => $model,

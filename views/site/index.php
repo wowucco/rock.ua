@@ -1,5 +1,6 @@
 <?php
 use yii\bootstrap\Carousel;
+use yii\helpers\Html;
 ?>
 
 
@@ -11,22 +12,22 @@ use yii\bootstrap\Carousel;
                             // the item contains only the image
                             [
                                 'content' => '<img src="/realestate/images/slider/1.jpg"/>',
-                                'caption' => '<h4>This is title</h4><p>This is the caption text</p>',
+                                'caption' => '<h4>Singer name</h4><p>Singer description</p>',
 
                             ],
                             [
                                 'content' => '<img src="/realestate/images/slider/2.jpg"/>',
-                                'caption' => '<h4>This is title</h4><p>This is the caption text</p>',
+                                'caption' => '<h4>Singer name</h4><p>Singer description</p>',
 
                             ],
                             [
                                 'content' => '<img src="/realestate/images/slider/3.jpg"/>',
-                                'caption' => '<h4>This is title</h4><p>This is the caption text</p>',
+                                'caption' => '<h4>Singer name</h4><p>Singer description</p>',
 
                             ],
                             [
                                 'content' => '<img src="/realestate/images/slider/4.jpg"/>',
-                                'caption' => '<h4>This is title</h4><p>This is the caption text</p>',
+                                'caption' => '<h4>Singer name</h4><p>Singer description</p>',
 
                             ],
                         ]
@@ -38,41 +39,21 @@ use yii\bootstrap\Carousel;
 <div class="banner-search">
     <div class="container">
         <!-- banner -->
-        <h3>Buy, Sale & Rent</h3>
+
         <div class="searchbar">
             <div class="row">
                 <div class="col-lg-6 col-sm-6">
-                    <input type="text" class="form-control" placeholder="Search of Properties">
+                   
+                    <?= Html::beginForm(['watch/index'], 'get'); ?>
+                    <h3>Search and Browse</h3>
+                    <?= Html::input('search', 'q', Yii::$app->request->get('q'), ['class' => 'form-control']) ?>
+                    <?= Html::hiddenInput('maxResults', '15')?>
                     <div class="row">
-                        <div class="col-lg-3 col-sm-3 ">
-                            <select class="form-control">
-                                <option>Buy</option>
-                                <option>Rent</option>
-                                <option>Sale</option>
-                            </select>
-                        </div>
-                        <div class="col-lg-3 col-sm-4">
-                            <select class="form-control">
-                                <option>Price</option>
-                                <option>$150,000 - $200,000</option>
-                                <option>$200,000 - $250,000</option>
-                                <option>$250,000 - $300,000</option>
-                                <option>$300,000 - above</option>
-                            </select>
-                        </div>
-                        <div class="col-lg-3 col-sm-4">
-                            <select class="form-control">
-                                <option>Property</option>
-                                <option>Apartment</option>
-                                <option>Building</option>
-                                <option>Office Space</option>
-                            </select>
-                        </div>
-                        <div class="col-lg-3 col-sm-4">
-                            <button class="btn btn-success"  onclick="window.location.href='buysalerent.html'">Find Now</button>
+                        <div class="col-lg-offset-8 col-lg-4 col-sm-4">
+                            <?= Html::submitButton('Hash String', ['class' => 'btn btn-info']) ?>
                         </div>
                     </div>
-
+                    <?= Html::endForm() ?>
 
                 </div>
                 <div class="col-lg-5 col-lg-offset-1 col-sm-6 ">

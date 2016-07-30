@@ -1,4 +1,4 @@
-<div class="row register">
+<div class="row">
     <div class="col-lg-6 col-lg-offset-3 col-sm-6 col-sm-offset-3 col-xs-12 ">
 
         <?php
@@ -16,7 +16,7 @@
         ]) ?>
 
 
-        <?=\yii\helpers\Html::submitButton('Send',['class' => 'btn btn-success']) ?>
+        <?=\yii\helpers\Html::submitButton('Send',['class' => 'btn btn-info']) ?>
         <?php
         \yii\bootstrap\ActiveForm::end();
         ?>

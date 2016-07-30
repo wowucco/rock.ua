@@ -20,35 +20,21 @@ class CitationsWidget extends Widget
 
     }*/
 
-    public function getCitationId()
+    private $citation;
+    
+    private function getRandomCitation()
     {
-        $i = 0;
-        $allid = array();
-
-        $All = Citations::find()->all();
-
-        foreach ($All as $value){
-            $allid[$i] = $value->id;
-            $i++;
-        }
-        if($i<=1){
-            $id = $allid[0];
-        }else{
-            $id = $allid[rand(0,$i)];
-        }
-
-
-        $query = Citations::findOne($id);
-        if($query){
-            return $query;
-        }
-        return 'Citation not found :(';
+        $this->citation = $this->getAllCitations();
+        return $this->citation[array_rand($this->citation, 1)];
     }
 
+    private function getAllCitations()
+    {
+        return Citations::find()->all();
+    }
+    
     public function run()
     {
-        $citation = $this->getCitationId();
-        return $this->render('index',['citation' => $citation]);
-        //print_r()
+        return $this->render('index', ['citation' => $this->getRandomCitation()]);
     }
 }
